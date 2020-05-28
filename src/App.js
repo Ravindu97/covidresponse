@@ -8,16 +8,25 @@ import { fetchData } from './api';
 
 class App extends React.Component {
 
-  async componentDidMount() {
-    const data = await fetchData();
 
-    console.log(data);
+  state = {
+    data: {},
+  }
+
+
+  async componentDidMount() {
+    const fetchedData = await fetchData();
+
+    this.setState({ data: fetchData });
   }
 
   render() {
+
+    const { data } = this.state;
+
     return (
       <div className={styles.container}>
-        <Cards />
+        <Cards data={data} />
         <Chart />
       </div>
     );
