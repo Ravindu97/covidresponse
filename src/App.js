@@ -17,7 +17,7 @@ class App extends React.Component {
   async componentDidMount() {
     const fetchedData = await fetchData();
 
-    this.setState({ data: fetchData });
+    this.setState({ data: fetchedData });
   }
 
   render() {
