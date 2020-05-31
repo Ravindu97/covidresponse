@@ -1,21 +1,38 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 
-import { Card, CardActionArea, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-
-
-const Cards = (props) => {
-    console.log(props);
+const Cards = () => {
 
     return (
         <h1>Cards</h1>
     )
 
 
-
 }
-
 export default Cards;
+
+
+
+
+
+// import React from 'react';
+// // import styles from './Cards.modules.css';
+// import { makeStyles } from '@material-ui/core/styles';
+
+// import { Card, CardActionArea, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+
+
+// const Cards = (props) => {
+//     console.log(props);
+
+//     return (
+//         <div></div>
+//     )
+
+
+
+// }
+
+// export default Cards;
 
 
 // const useStyles = makeStyles({
