@@ -27,7 +27,7 @@ class App extends React.Component {
   render() {
 
     // uesd to destructure data from the state
-    const { data } = this.state.data;
+    const { data } = this.state;
 
     return (
 
