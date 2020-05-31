@@ -33,8 +33,9 @@ class App extends React.Component {
 
       <div className={styles.container}>
         <h1>App</h1>
-        <Cards data={data} />
         <Chart />
+        <Cards data={data} />
+
       </div>
 
     )
