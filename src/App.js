@@ -32,9 +32,9 @@ class App extends React.Component {
     return (
 
       <div className={styles.container}>
-        <h1>App</h1>
-        <Chart />
+
         <Cards data={data} />
+        <Chart data={data} />
 
       </div>
 
