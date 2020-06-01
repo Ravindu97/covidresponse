@@ -1,129 +1,55 @@
-import React, { Component } from 'react';
-import { Bar, Line, Pie } from 'react-chartjs-2';
+import React from 'react';
+import { Bar } from 'react-chartjs-2';
 
-class Charts extends Component {
-
-
-    state = {
-        chartData: {}
-    }
-
-    componentWillMount() {
-        this.getChartData();
-    }
+const Chart = ({ data: { global_deaths, global_recovered, global_total_cases } }) => {
 
 
 
+    const barChart = (
+        global_deaths
+            ? (<Bar
 
-    getChartData() {
-        this.setState({
-
-            chartData: {
-                labels: ['Active Cases', 'recovered', 'Deaths'],
-                datasets: [
-                    {
+                data={{
+                    labels: ['Infected', 'Recovered', 'Deaths'],
+                    datasets: [{
                         label: 'People',
-                        data: [{ 25}, 35, 40],
-                        backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)']
-                    }
-                ]
-            }
+                        backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+                        data: [global_total_cases, global_recovered, global_deaths]
+                    }]
+                }}
+                options={{
+                    legend: { display: false },
+                    title: { display: true, text: 'Local sate of COVID 19' }
+                }}
 
 
-        })
-    }
+            />
 
-
-
-    render() {
-
-
-        const { data: { local_active_cases, local_recovered, local_deaths } } = this.props;
-
+            ) : null
+    )
 
 
 
 
 
+    return (
+        <div>
+            {barChart}
+        </div>
 
+    )
 
-        return (
-
-            <div>
-
-
-
-                <Bar
-
-                    data={this.state.chartData}
-                    options={{}}
-
-
-                />
-
-            </div>
-
-
-
-        )
-
-    }
 
 
 }
 
-export default Charts;
+export default Chart;
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-// const dataSet = {
-//     chartData: {
-//         labels: ['Active Cases', 'recovered', 'Deaths'],
-//         datasets: [
-//             {
-//                 label: 'People',
-//                 data: [25, 35, 40],
-//                 backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)']
-//             }
-//         ]
-//     }
-// }
-
-
-
-// const Chart = () => {
-
-
-//     return (
-//         <div>
-
-//             <Bar
-
-//                 data={dataSet}
-//                 options={{}}
-
-
-//             />
-
-//         </div>
-//     )
-
-
-// }
-// export default Chart;
 
 
 
