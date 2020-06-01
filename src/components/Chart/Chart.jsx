@@ -66,7 +66,7 @@ const Chart = ({ data: { global_deaths, global_new_cases, global_recovered, glob
             ? (<Bar
 
                 data={{
-                    labels: ['Infected-Total', 'infected-New', 'Global Recovered', 'Total Deaths', 'New Deaths', 'Hospitalized'],
+                    labels: ['Infected-Total', 'infected-New', 'Global Recovered', 'Total Deaths', 'New Deaths'],
                     datasets: [{
                         label: 'People',
                         backgroundColor: ['rgba(255, 159, 64, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)'],
@@ -91,7 +91,7 @@ const Chart = ({ data: { global_deaths, global_new_cases, global_recovered, glob
             ? (<Bar
 
                 data={{
-                    labels: ['Infected-Total', 'infected-New', 'Recovered', 'Total Deaths', 'New Deaths'],
+                    labels: ['Infected-Total', 'infected-New', 'Recovered', 'Total Deaths', 'New Deaths', 'Hospitalized'],
                     datasets: [{
                         label: 'People',
                         backgroundColor: ['rgba(255, 159, 64, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(164, 29, 194, 0.6)'],
